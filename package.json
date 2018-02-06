@@ -1,0 +1,34 @@
+{
+  "name": "react-tutorials",
+  "version": "0.0.0",
+  "description": "",
+  "main": "js/client.js",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "history": "^1.17.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base 1-base --inline --hot --port=3000",
+    "start":"npm run build",
+    "build": "webpack -d && cp 1-base/index.html 1-base/dist/index.html && ./node_modules/.bin/webpack-dev-server --content-base 1-base --inline --hot --port=3000",
+    "build:prod": "webpack -p && cp 1-base/index.html 1-base/dist/index.html  ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
