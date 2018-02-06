@@ -9,10 +9,25 @@ export default class Header extends React.Component{
 	render(){
 		 return (
 		 		<div>
-		 		  <Title title={this.props.title} />
-		 		  <input value={this.props.title} onChange={this.handleChange.bind(this)}/>
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Active</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Disabled</a>
+						</li>
+					</ul>
+
+					<Title title={this.props.title} />
+					<input value={this.props.title} onChange={this.handleChange.bind(this)}/>
+					your name is {this.props.name}
 		 		</div>
 		 	);
-		 
 	}
 }

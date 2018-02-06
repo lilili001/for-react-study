@@ -26,7 +26,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --content-base 1-base --inline --hot --port=3000",
     "start":"npm run build",
     "build": "webpack -d && cp 1-base/index.html 1-base/dist/index.html && ./node_modules/.bin/webpack-dev-server --content-base 1-base --inline --hot --port=3000",
-    "build:prod": "webpack -p && cp 1-base/index.html 1-base/dist/index.html  ",
+    "build:prod": "webpack -p && cp 1-base/index.html 1-base/dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
