@@ -5,6 +5,5 @@ export default class Title extends React.Component{
 		 return (
 		 		 <h1>{this.props.title}</h1>
 		 	);
-		 
 	}
 }

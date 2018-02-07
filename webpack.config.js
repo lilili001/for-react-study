@@ -22,7 +22,7 @@ module.exports = {
     output: {
         path: __dirname + "/1-base/dist/",
         filename: "client.min.js",
-        publicPath:""
+        publicPath:"dist/"
     },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
