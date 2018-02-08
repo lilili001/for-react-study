@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default class Home extends React.Component{
     constructor(props){
         super();
@@ -15,6 +14,25 @@ export default class Home extends React.Component{
     }
     componentWillMount(){
         console.log('component will mount');
+    }
+    componentDidMount(){
+        console.log('component did mount');
+    }
+    componentWillReceiveProps(nextProps){
+        console.log('component will receive props',nextProps);
+    }
+    shouldComponentUpdate(nextProps,nextState){
+        console.log('should component update',nextProps,nextState);
+        return true;
+    }
+    componentWillUpdate(nextProps,nextState){
+        console.log('component will update',nextProps,nextState);
+    }
+    componentDidUpdate(nextProps,nextState){
+        console.log('component did update',nextProps,nextState);
+    }
+    componentWillUnmount(nextProps,nextState){
+        console.log('component will unmount',nextProps,nextState);
     }
     getOlder(){
         // this.age += 3;
@@ -52,6 +70,8 @@ export default class Home extends React.Component{
                 <hr/>
                 <input type="text" value={this.state.homeLink} onChange={ (event)=> this.onHandleChange(event)  }/>
                 <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">change Top Home Link</button>
+                <hr/>
+                <hr/>
             </div>
         );
     }
