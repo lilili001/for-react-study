@@ -22,6 +22,9 @@ export default class Todos extends React.Component{
 	createTodo(){
 		TodoActions.createTodo( Date.now() );
 	}
+	loadTodos(){
+		TodoActions.loadTodos();
+	}
     render(){
     	const {todos} = this.state;
     	const TodoComponents = todos.map((todo)=>{
@@ -31,6 +34,7 @@ export default class Todos extends React.Component{
             <div>
             	<h1>Todos</h1>
             	<button onClick={this.createTodo.bind(this)}>Create!</button>
+            	<button onClick={this.loadTodos.bind(this)}>Load!</button>
             	<ul>{TodoComponents}</ul>
             </div>
         );
