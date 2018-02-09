@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, "1-base"),
+    context: path.join(__dirname, "3-flaux"),
     devtool: false,
     entry: "./js/client.js",//入口文件
     module: {
@@ -20,9 +20,12 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + "/1-base/dist/",
+        path: __dirname + "/3-flaux/dist/",
         filename: "client.min.js",
-        publicPath:"dist/"
+        publicPath:"/dist/"
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
