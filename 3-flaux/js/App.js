@@ -4,7 +4,6 @@ import Layout from './pages/Layout';
 import Todos from './pages/Todos';
 export default class App extends React.Component{
     render(){
-        
         return (
             <BrowserRouter>
                 <div>

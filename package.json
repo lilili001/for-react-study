@@ -4,6 +4,7 @@
   "description": "",
   "main": "js/client.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.0",
     "babel-plugin-add-module-exports": "^0.1.2",
@@ -19,15 +20,19 @@
     "react-dom": "^0.14.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^5.0.0",
+    "redux-thunk": "^2.2.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.16.5"
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base 3-flaux --inline --hot --port=3000",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base 6-redux-react --inline --hot --port=3000",
     "start": "npm run build",
-    "build": "webpack -d && cp 3-flaux/index.html 3-flaux/dist/index.html && ./node_modules/.bin/webpack-dev-server --content-base 3-flaux --inline --hot --port=3000",
-    "build:prod": "webpack -p && cp 3-flaux/index.html 3-flaux/dist/index.html",
+    "build": "webpack -d && cp 6-redux-react/index.html 6-redux-react/dist/index.html && ./node_modules/.bin/webpack-dev-server --content-base 6-redux-react --inline --hot --port=3000",
+    "build:prod": "webpack -p && cp 6-redux-react/index.html 6-redux-react/dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

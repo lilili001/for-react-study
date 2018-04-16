@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, "3-flaux"),
+    context: path.join(__dirname, "6-redux-react"),
     devtool: false,
     entry: "./js/client.js",//入口文件
     module: {
@@ -20,7 +20,7 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + "/3-flaux/dist/",
+        path: __dirname + "/6-redux-react/dist/",
         filename: "client.min.js",
         publicPath:"/dist/"
     },

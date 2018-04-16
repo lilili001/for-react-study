@@ -13,7 +13,7 @@ class TodoStore extends EventEmitter{
 				},
 				{
 					id:1134568,
-					text:"Pay Bills",
+					text:"Pay Water Bills",
 					complete:false
 				}
 		 	]  
@@ -47,7 +47,9 @@ class TodoStore extends EventEmitter{
 	}
 
 }
+
 const todoStore = new TodoStore;
+
 dispatcher.register( todoStore.handleActions.bind(todoStore) );
 
 window.dispatcher = dispatcher;//console打印 dispatcher.dispatcher({type:'',text:''})
